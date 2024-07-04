@@ -1,16 +1,14 @@
 {
-  "name": "nuxt-app",
+  "name": "cross-platform-project",
   "private": true,
-  "type": "module",
+  "workspaces": [
+    "pc",
+    "miniapp"
+  ],
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
-  },
-  "dependencies": {
-    "nuxt": "^3.12.3",
-    "vue": "latest"
+    "build:pc": "cd pc && npm run build",
+    "dev:pc": "cd pc && npm run dev",
+    "build:miniapp": "cd miniapp && npm run build:h5",
+    "dev:miniapp": "cd miniapp && npm run dev:h5"
   }
 }
